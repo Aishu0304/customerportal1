@@ -1,0 +1,61 @@
+<div class="profile-container">
+  <h2 class="page-title">Customer Profile</h2>
+
+  <div class="customer-profile-wrapper">
+    <ng-container *ngIf="customerProfile; else loadingOrError">
+      <div class="profile-card">
+        <div class="profile-header">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="Profile"
+            class="avatar"
+          />
+
+          <div class="profile-summary">
+            <h3 class="name">{{ customerProfile.name }}</h3>
+            <div class="meta-info">
+              <span>ID: {{ customerProfile.id }}</span>
+              <span
+                class="status"
+                [ngClass]="{
+                  'active': customerProfile.status === 'Active',
+                  'inactive': customerProfile.status === 'Inactive'
+                }"
+              >
+                {{ customerProfile.status }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-sections">
+          <section class="section">
+            <h4>📞 Contact Info</h4>
+            <div class="info-row"><strong>Address:</strong> {{ customerProfile.address }}</div>
+            <div class="info-row"><strong>Phone:</strong> {{ customerProfile.phone }}</div>
+          </section>
+
+          <section class="section">
+            <h4>💼 Sales Info</h4>
+            <div class="info-row"><strong>Sales Org:</strong> {{ customerProfile.salesOrg }}</div>
+            <div class="info-row"><strong>Channel:</strong> {{ customerProfile.distChannel }}</div>
+            <div class="info-row"><strong>Division:</strong> {{ customerProfile.division }}</div>
+            <div class="info-row"><strong>District:</strong> {{ customerProfile.salesDistrict }}</div>
+          </section>
+
+          <section class="section">
+            <h4>👥 Partner Info</h4>
+            <div class="info-row"><strong>Function:</strong> {{ customerProfile.partnerFunction }}</div>
+            <div class="info-row"><strong>Counter:</strong> {{ customerProfile.partnerCounter }}</div>
+          </section>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Loading/Error Template -->
+    <ng-template #loadingOrError>
+      <div *ngIf="isLoading" class="status-message">Loading customer profile...</div>
+      <div *ngIf="error" class="error-message">{{ error }}</div>
+    </ng-template>
+  </div>
+</div>

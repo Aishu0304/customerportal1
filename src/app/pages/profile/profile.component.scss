@@ -1,0 +1,109 @@
+.profile-container {
+  padding: 2rem;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #3f51b5;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Center card wrapper */
+.customer-profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile Card Styling */
+.profile-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Header with image */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-size: 1.8rem;
+  color: #3f51b5;
+  margin: 0;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.status.active {
+  color: green;
+  font-weight: bold;
+}
+
+.status.inactive {
+  color: red;
+  font-weight: bold;
+}
+
+/* Sections */
+.profile-sections {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.section {
+  margin-top: 1.5rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.section h4 {
+  font-size: 1.3rem;
+  color: #3f51b5;
+  margin-bottom: 0.75rem;
+}
+
+.info-row {
+  margin-bottom: 0.5rem;
+}
+
+/* Loading and Error */
+.status-message,
+.error-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 2rem;
+}
